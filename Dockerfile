@@ -16,6 +16,6 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install ansible==2.2.0.0
 
-VOLUME [ "/sys/fs/cgroup" ]
+VOLUME [ "/sys/fs/cgroup", "/run", "/tmp" ]
 CMD ["/usr/sbin/init"]
 
